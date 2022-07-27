@@ -34,9 +34,22 @@ class TodosController < ApplicationController
         else
             render "edit"
         end
-        
 
     end
+
+    def index
+        @todos = Todo.all
+
+    end
+
+    def destroy
+        @todo = Todo.find(params[:id])
+        @todo.destroy
+        flash[:notice] = "Deleted sucessfully"
+        redirect_to todos_path
+
+    end
+
 
 
 

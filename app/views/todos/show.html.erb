@@ -1,5 +1,7 @@
 <h1>data added</h1>
+<p> <%= link_to "Show all todos" ,todos_path %></p>
 <p>
 name : <%= @todo.name %><br>
 description : <%= @todo.description %>
 </p>
+<p><%=link_to "edit" , edit_todo_path(@todo)%></p>
